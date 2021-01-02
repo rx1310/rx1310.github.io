@@ -2,3 +2,12 @@
 
 // ? Импорт шрифта
 @import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
+// ? Twitter Bootstrap Grid (https://github.com/rx1310/workspace/tree/master/BootstrapGrid/SASS)
+@import '_grid/functions';
+@import '_grid/variables';
+@import '_grid/mixins/breakpoints';
+@import '_grid/mixins/grid-framework';
+@import '_grid/mixins/grid';
+@import '_grid/grid';
+@import '_grid/utilities/flex';
