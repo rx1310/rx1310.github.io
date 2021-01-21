@@ -47,7 +47,8 @@ img {
 
 }
 
-header {
+header,
+footer {
 
   display: flex;
   flex-flow: column nowrap;
@@ -76,15 +77,29 @@ header {
     left: 0;
     z-index: -1;
     height: 100%;
-    width:100%;
+    width: 100%;
     content: "";
     transform: skewY(4deg);
     transform-origin: bottom right;
-    background: lighten($colorPrimary, 30%)
+    background: #272727;
   }
 
   @media (min-width: 481px) and (max-width: 767px) { img { width: 25%; } }
   @media (min-width: 768px) and (max-width: 1024px) { img { width: 35%; } }
   @media (min-width: 1281px) { img { width: 25%; } }
+
+}
+
+footer {
+
+  &::after {
+    transform: skewY(8deg);
+    background: #272727;
+  }
+
+  &::before {
+    transform: skewY(-2deg);
+    background: #ffffff;
+  }
 
 }
