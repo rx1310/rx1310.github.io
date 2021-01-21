@@ -18,3 +18,11 @@
        -o-transition: $transition; /* ? Opera */
           transition: $transition;
 }
+
+@mixin setTransform($transform) {
+  -webkit-transform: $transform; /* Safari, Chrome, iOS */
+     -moz-transform: $transform; /* Firefox */
+      -ms-transform: $transform; /* IE */
+       -o-transform: $transform; /* Opera */
+          transform: $transform;
+}
