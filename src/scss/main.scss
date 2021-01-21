@@ -7,6 +7,11 @@
 @import 'var';
 @import 'mixins';
 @import 'reset';
+@import 'base';
+
+// ? Компоненты
+@import 'components/button';
+@import 'components/typography';
 
 // ? Twitter Bootstrap Grid (https://github.com/rx1310/workspace/tree/master/BootstrapGrid/SASS)
 @import '_grid/functions';
