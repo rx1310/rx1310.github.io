@@ -10,6 +10,7 @@
   border: 2px solid fade-out($colorCard, .8);
   background: linear-gradient(130deg, fade-out($colorCard, .9) 0%, transparent 100%);
   padding: 1em 1.2em 0;
+  margin-bottom: 1em;
   box-sizing: border-box;
   cursor: pointer;
   
@@ -26,6 +27,21 @@
 
   &:active {
     background-color: fade-out($colorCard, .8);
+  }
+
+  img {
+
+    @include setBoxShadow(0 .15em 1em -0.2em rgba(0 0 0 / .6));
+
+    &.float-right {
+      float: right; 
+      margin: 0 0 1em 1em;
+    }
+  
+    &.float-left {
+      float: left; 
+      margin: 0 1em 0 0;
+    }
     
   }
 
