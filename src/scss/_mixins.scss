@@ -1,0 +1,20 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
+
+@mixin setBorderRadius($borderRadius: $borderRadius) {
+  -webkit-border-radius: $borderRadius; /* ? Safari, Chrome, iOS */
+     -moz-border-radius: $borderRadius; /* ? Firefox */
+          border-radius: $borderRadius;
+}
+
+@mixin setBoxShadow($boxShadow) {
+  -webkit-box-shadow: $boxShadow; /* ? Safari, Chrome, iOS */
+     -moz-box-shadow: $boxShadow; /* ? Firefox */
+          box-shadow: $boxShadow;
+}
+
+@mixin setTransition($transition) {
+  -webkit-transition: $transition; /* ? Safari, Chrome, iOS */
+     -moz-transition: $transition; /* ? Firefox */
+       -o-transition: $transition; /* ? Opera */
+          transition: $transition;
+}

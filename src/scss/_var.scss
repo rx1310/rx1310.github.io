@@ -1,0 +1,21 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
+
+$colorPrimary: #121212;
+$colorSecondary: #FFFFFF;
+$colorSurface: #272727;
+$colorCard: #272727;
+$colorBackground: $colorPrimary;
+$colorDivider: $colorCard;
+$colorFont: #FFFFFF;
+$colorFontSecondary: fade-out($colorFont, .5);
+
+$COLOR_BLUE: #176bef;
+$COLOR_RED: #ff3e30;
+$COLOR-YELLOW: #f7b529;
+$COLOR-GREEN: #179c52;
+
+$scrollbar: $colorDivider !default;
+$scrollbarThumb: $colorSecondary !default;
+$scrollbarTrack: $scrollbar !default;
+
+$borderRadius: 0.5em !default;
