@@ -1,0 +1,8 @@
+{
+	"Импорт файла": {
+		"scope": "scss",
+		"prefix": "import",
+		"body": ["@import '$1';", "$2"],
+		"description": "Импорт"
+	}
+}
