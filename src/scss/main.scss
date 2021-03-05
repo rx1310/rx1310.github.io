@@ -1,7 +1,7 @@
 // ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
 
 // ? Импорт шрифта
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 // ? Основные стили
 @import 'var';
@@ -9,9 +9,12 @@
 @import 'reset';
 @import 'base';
 
+// ? Анимации
+@import 'anims/typewriter';
+
 // ? Компоненты
 @import 'components/button';
-@import 'components/card';
+@import 'components/fontello';
 @import 'components/typography';
 
 // ? Twitter Bootstrap Grid (https://github.com/rx1310/workspace/tree/master/BootstrapGrid/SASS)

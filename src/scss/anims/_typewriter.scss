@@ -1,0 +1,240 @@
+// ! Aaron Iker, https://codepen.io/aaroniker
+
+/*
+ * <div class="typewriter anim-typewriter">
+ *    <div class="slide"><i></i></div>
+ *    <div class="paper"></div>
+ *    <div class="keyboard"></div>
+ * </div>
+ */
+
+$blue: #5C86FF;
+$blue-dark: #275EFE;
+$key: #fff;
+$paper: #EEF0FD;
+$text: #D3D4EC;
+$tool: #FBC56C;
+$duration: 3s;
+
+@mixin keyboard($position: 0, $value: 0) {
+  
+  $keys: map-merge((0: '0', 1: '0', 2: '0', 3: '0', 4: '0', 5: '0', 6: '10px', 7: '10px', 8: '10px', 9: '10px'), ($position: $value));
+
+  box-shadow: 15px #{map-get($keys, 0)} 0 $key, 
+              30px #{map-get($keys, 1)} 0 $key, 
+              45px #{map-get($keys, 2)} 0 $key, 
+              60px #{map-get($keys, 3)} 0 $key, 
+              75px #{map-get($keys, 4)} 0 $key, 
+              90px #{map-get($keys, 5)} 0 $key, 
+              22px #{map-get($keys, 6)} 0 $key, 
+              37px #{map-get($keys, 7)} 0 $key, 
+              52px #{map-get($keys, 8)} 0 $key, 
+              60px #{map-get($keys, 8)} 0 $key, 
+              68px #{map-get($keys, 8)} 0 $key, 
+              83px #{map-get($keys, 9)} 0 $key;
+
+}
+
+.anim-typewriter {
+
+  position: relative;
+  animation: bounce $duration linear infinite;
+
+  .slide {
+
+    width: 92px;
+    height: 20px;
+    margin-left: 14px;
+    transform: translateX(14px);
+    background: linear-gradient($blue, $blue-dark);
+    animation: slide $duration ease infinite;
+
+    @include setBorderRadius(4px);
+
+    &:before,
+    &:after,
+    i:before {
+
+      content: '';
+      position: absolute;
+      background: $tool;
+
+    }
+
+    &:before {
+
+      width: 2px;
+      height: 8px;
+      top: 6px;
+      left: 100%;
+
+    }
+    
+    &:after {
+
+      left: 94px;
+      top: 3px;
+      height: 14px;
+      width: 6px;
+
+    }
+
+    i {
+
+      display: block;
+      position: absolute;
+      right: 100%;
+      width: 6px;
+      height: 4px;
+      top: 4px;
+      background: $tool;
+
+      &:before {
+
+        right: 100%;
+        top: -2px;
+        width: 4px;
+        height: 14px;
+
+      }
+
+    }
+
+  }
+
+  .paper {
+
+    position: absolute;
+    left: 24px;
+    top: -26px;
+    width: 40px;
+    height: 46px;
+    background: $paper;
+    transform: translateY(46px);
+    animation: paper $duration linear infinite;
+
+    @include setBorderRadius(5px);
+
+    &:before {
+
+      $boxShadow: 0 12px 0 $text, 0 24px 0 $text, 0 36px 0 $text;
+
+      content: '';
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      top: 7px;
+      height: 4px;
+      transform: scaleY(.8);
+      background: $text;
+
+      @include setBorderRadius(2px);
+      @include setBoxShadow($boxShadow);
+
+    }
+
+  }
+
+  .keyboard {
+
+    width: 120px;
+    height: 56px;
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+
+    &:before,
+    &:after {
+
+      content: '';
+      position: absolute;
+
+    }
+
+    &:before {
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, $blue, $blue-dark);
+      transform: perspective(10px) rotateX(2deg);
+      transform-origin: 50% 100%;
+
+      @include setBorderRadius(7px);
+
+    }
+
+    &:after {
+
+      left: 2px;
+      top: 25px;
+      width: 11px;
+      height: 4px;
+
+      @include setBorderRadius(2px);
+      @include keyboard;
+
+      animation: keyboard $duration linear infinite;
+
+    }
+
+  }
+
+}
+
+@keyframes bounce {
+
+  85%,
+  92%,
+  100% {transform: translateY(0);}
+  89% {transform: translateY(-4px);}
+  95% {transform: translateY(2px);}
+}
+
+@keyframes slide {
+
+  5% {transform: translateX(14px);}
+  15%, 30% {transform: translateX(6px);}
+  40%, 55% {transform: translateX(0);}
+  65%, 70% {transform: translateX(-4px);}
+  80%, 89% {transform: translateX(-12px);}
+  100% {transform: translateX(14px);}
+
+}
+
+@keyframes paper {
+
+  5% {transform: translateY(46px);}
+  20%, 30% {transform: translateY(34px);}
+  40%, 55% {transform: translateY(22px);}
+  65%, 70% {transform: translateY(10px);}
+  80%, 85% {transform: translateY(0);}
+  92%, 100% {transform: translateY(46px);}
+
+}
+
+@keyframes keyboard {
+
+  5%, 
+  12%, 
+  21%, 
+  30%, 
+  39%, 
+  48%, 
+  57%, 
+  66%, 
+  75%, 
+  84% {@include keyboard;}
+
+  9% {@include keyboard(0, 2px);}
+  18% {@include keyboard(3, 2px);}
+  27% {@include keyboard(6, 12px);}
+  36% {@include keyboard(8, 12px);}
+  45% {@include keyboard(5, 2px);}
+  54% {@include keyboard(1, 2px);}
+  63% {@include keyboard(9, 12px);}
+  72% {@include keyboard(2, 2px);}
+  81% {@include keyboard(7, 12px);}
+
+}

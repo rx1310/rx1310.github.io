@@ -1,28 +1,36 @@
 // ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
 
-// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2020 | MIT License
-
 .button {
 
   $transition:
    background-color .30s,
+   border-color .30s,
    color .30s;
 
-  color: invert($colorFont);
-  background-color: $colorSecondary;
+  color: $colorFont;
+  background-color: $colorButtonBackground;
+  border: 2px solid $colorButtonBorder;
   box-sizing: border-box;
   position: relative;
   padding: .6em .9em;
   min-width: 64px;
   text-overflow: ellipsis;
   text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: .1em;
   font-size: 80%;
   
   @include setBorderRadius();
   @include setTransition($transition);
 
-  &:hover { background-color: darken($colorSecondary, 25%); }
-  &:active { background-color: darken($colorSecondary, 50%); }
+  &:hover {
+    border-color: $colorAccent;
+    color: $colorAccent;
+  }
+
+  &:active {
+    color: invert($colorFont);
+    background-color: $colorAccent;
+  }
 
 }

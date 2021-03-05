@@ -3,12 +3,13 @@
 body {
   background-color: $colorBackground;
   color: $colorFont;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
   line-height: 1.15;
   scrollbar-width: thin;
   scrollbar-color: $scrollbarThumb $scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -27,12 +28,30 @@ body {
 
 }
 
-hr {
-  border: 0;
-  border-top: 2px solid $colorDivider;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+a {
+  
+  $transition:
+    text-decoration-color .30s,
+    color .30s;
+
+  color: $colorAccent;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: $COLOR-GREEN;
+  text-decoration-style: wavy;
+
+  -moz-text-decoration-color: $COLOR-GREEN;
+  -moz-text-decoration-style: wavy;
+
+  @include setTransition($transition);
+
+  &:hover {
+    color: darken($COLOR-RED, 20%);
+    text-decoration-color: $COLOR-YELLOW;
+    -moz-text-decoration-color: $COLOR-YELLOW;
+  }
+  &:active { color: darken($colorAccent, 20%); }
+
 }
 
 img {
@@ -47,59 +66,26 @@ img {
 
 }
 
-header,
-footer {
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+} 
 
-  display: flex;
-  flex-flow: column nowrap;
-  position: relative;
-  margin: 0; 
-  padding: 2em 4em;
-  overflow: hidden;
-  color: invert($colorFont);
-
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    content: "";
-    transform: skewY(-7deg);
-    transform-origin: bottom left;
-    background: #ffffff;
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    content: "";
-    transform: skewY(4deg);
-    transform-origin: bottom right;
-    background: #272727;
-  }
-
-  @media (min-width: 481px) and (max-width: 767px) { img { width: 25%; } }
-  @media (min-width: 768px) and (max-width: 1024px) { img { width: 35%; } }
-  @media (min-width: 1281px) { img { width: 25%; } }
-
+@keyframes blink-animation {
+  to { visibility:hidden; }
 }
 
-footer {
+@-webkit-keyframes blink-animation {
+  to { visibility:hidden; } 
+}
 
-  &::after {
-    transform: skewY(8deg);
-    background: #272727;
-  }
+.fragment {
 
-  &::before {
-    transform: skewY(-2deg);
-    background: #ffffff;
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-align-left {justify-content: left;}
 
 }
