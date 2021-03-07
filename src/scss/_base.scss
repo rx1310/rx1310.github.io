@@ -34,7 +34,7 @@ a {
     text-decoration-color .30s,
     color .30s;
 
-  color: $colorAccent;
+  color: $COLOR-BLUE;
   font-weight: bold;
   text-decoration: none;
   text-decoration-style: none;
@@ -42,8 +42,8 @@ a {
 
   @include setTransition($transition);
 
-  &:hover { color: darken($colorAccent, 15%); }
-  &:active { color: darken($colorAccent, 25%); }
+  &:hover { color: darken($COLOR-BLUE, 15%); }
+  &:active { color: darken($COLOR-BLUE, 25%); }
 
 }
 

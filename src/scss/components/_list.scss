@@ -2,7 +2,7 @@
 
 ul.list {
 
-  background-color: lighten($colorBackground, 5%);
+  border: 1px solid $colorDivider;
   list-style-type: none;
   padding: 0;
 
@@ -20,11 +20,11 @@ ul.list {
 
     @include setTransition($transition);
 
-    &:hover { background-color: fade-out($colorAccent, .8); }
+    &:hover { background-color: fade-out($colorDivider, .5); }
     &:active { 
-      background-color: $colorAccent;
-      border-color: $colorAccent;
-      color: invert($colorFont);
+      background-color: $colorDivider;
+      border-color: $colorDivider;
+      //color: invert($colorFont);
     }
 
     &:not(:last-child) {
@@ -43,6 +43,7 @@ ul.list {
     &.title {
       
       border: none;
+      font-weight: bold;
       color: $colorAccent;
       cursor: not-allowed;
       pointer-events: none;

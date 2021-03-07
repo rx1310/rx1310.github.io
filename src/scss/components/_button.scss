@@ -7,9 +7,9 @@
    border-color .30s,
    color .30s;
 
-  color: $colorFont;
-  background-color: $colorButtonBackground;
-  border: 2px solid $colorButtonBorder;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid $colorDivider;
   box-sizing: border-box;
   position: relative;
   padding: .6em .9em;
@@ -24,13 +24,15 @@
   @include setTransition($transition);
 
   &:hover {
-    border-color: $colorAccent;
+    background-color: fade-out($colorDivider, .5);
+    //border-color: $colorAccent;
     color: $colorAccent;
   }
 
   &:active {
     color: invert($colorFont);
     background-color: $colorAccent;
+    //border-color: $colorAccent;
   }
 
 }
