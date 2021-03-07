@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 *,
 *::before,
 *::after {
@@ -221,10 +221,11 @@ legend {
 body {
   background-color: #111111;
   color: #fafafa;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   margin: 0;
   line-height: 1.15;
   scrollbar-width: thin;
+  text-transform: lowercase;
   scrollbar-color: #6d6d6d #000000;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
@@ -319,6 +320,220 @@ img.rounded {
   justify-content: left;
 }
 
+/*
+ * <div class="typewriter anim-typewriter">
+ *    <div class="slide"><i></i></div>
+ *    <div class="paper"></div>
+ *    <div class="keyboard"></div>
+ * </div>
+ */
+.anim-typewriter {
+  position: relative;
+  animation: bounce 3s linear infinite;
+}
+.anim-typewriter .slide {
+  width: 92px;
+  height: 20px;
+  margin-left: 14px;
+  transform: translateX(14px);
+  background: linear-gradient(#176bef, #1d49cc);
+  animation: slide 3s ease infinite;
+  -webkit-border-radius: 4px;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 4px;
+  /* ? Firefox */
+  border-radius: 4px;
+}
+.anim-typewriter .slide:before, .anim-typewriter .slide:after,
+.anim-typewriter .slide i:before {
+  content: "";
+  position: absolute;
+  background: #f7b529;
+}
+.anim-typewriter .slide:before {
+  width: 2px;
+  height: 8px;
+  top: 6px;
+  left: 100%;
+}
+.anim-typewriter .slide:after {
+  left: 94px;
+  top: 3px;
+  height: 14px;
+  width: 6px;
+}
+.anim-typewriter .slide i {
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 6px;
+  height: 4px;
+  top: 4px;
+  background: #f7b529;
+}
+.anim-typewriter .slide i:before {
+  right: 100%;
+  top: -2px;
+  width: 4px;
+  height: 14px;
+}
+.anim-typewriter .paper {
+  position: absolute;
+  left: 24px;
+  top: -26px;
+  width: 40px;
+  height: 46px;
+  background: #EEF0FD;
+  transform: translateY(46px);
+  animation: paper 3s linear infinite;
+  -webkit-border-radius: 5px;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 5px;
+  /* ? Firefox */
+  border-radius: 5px;
+}
+.anim-typewriter .paper:before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 7px;
+  height: 4px;
+  transform: scaleY(0.8);
+  background: #D3D4EC;
+  -webkit-border-radius: 2px;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 2px;
+  /* ? Firefox */
+  border-radius: 2px;
+  -webkit-box-shadow: 0 12px 0 #D3D4EC, 0 24px 0 #D3D4EC, 0 36px 0 #D3D4EC;
+  /* ? Safari, Chrome, iOS */
+  -moz-box-shadow: 0 12px 0 #D3D4EC, 0 24px 0 #D3D4EC, 0 36px 0 #D3D4EC;
+  /* ? Firefox */
+  box-shadow: 0 12px 0 #D3D4EC, 0 24px 0 #D3D4EC, 0 36px 0 #D3D4EC;
+}
+.anim-typewriter .keyboard {
+  width: 120px;
+  height: 56px;
+  margin-top: -10px;
+  z-index: 1;
+  position: relative;
+}
+.anim-typewriter .keyboard:before, .anim-typewriter .keyboard:after {
+  content: "";
+  position: absolute;
+}
+.anim-typewriter .keyboard:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #176bef, #1d49cc);
+  transform: perspective(10px) rotateX(2deg);
+  transform-origin: 50% 100%;
+  -webkit-border-radius: 7px;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 7px;
+  /* ? Firefox */
+  border-radius: 7px;
+}
+.anim-typewriter .keyboard:after {
+  left: 2px;
+  top: 25px;
+  width: 11px;
+  height: 4px;
+  -webkit-border-radius: 2px;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 2px;
+  /* ? Firefox */
+  border-radius: 2px;
+  box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  animation: keyboard 3s linear infinite;
+}
+
+@keyframes bounce {
+  85%, 92%, 100% {
+    transform: translateY(0);
+  }
+  89% {
+    transform: translateY(-4px);
+  }
+  95% {
+    transform: translateY(2px);
+  }
+}
+@keyframes slide {
+  5% {
+    transform: translateX(14px);
+  }
+  15%, 30% {
+    transform: translateX(6px);
+  }
+  40%, 55% {
+    transform: translateX(0);
+  }
+  65%, 70% {
+    transform: translateX(-4px);
+  }
+  80%, 89% {
+    transform: translateX(-12px);
+  }
+  100% {
+    transform: translateX(14px);
+  }
+}
+@keyframes paper {
+  5% {
+    transform: translateY(46px);
+  }
+  20%, 30% {
+    transform: translateY(34px);
+  }
+  40%, 55% {
+    transform: translateY(22px);
+  }
+  65%, 70% {
+    transform: translateY(10px);
+  }
+  80%, 85% {
+    transform: translateY(0);
+  }
+  92%, 100% {
+    transform: translateY(46px);
+  }
+}
+@keyframes keyboard {
+  5%, 12%, 21%, 30%, 39%, 48%, 57%, 66%, 75%, 84% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  9% {
+    box-shadow: 15px 2px 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  18% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 2px 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  27% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 12px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  36% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 12px 0 #fff, 60px 12px 0 #fff, 68px 12px 0 #fff, 83px 10px 0 #fff;
+  }
+  45% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 2px 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  54% {
+    box-shadow: 15px 0 0 #fff, 30px 2px 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  63% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 12px 0 #fff;
+  }
+  72% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 2px 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 10px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+  81% {
+    box-shadow: 15px 0 0 #fff, 30px 0 0 #fff, 45px 0 0 #fff, 60px 0 0 #fff, 75px 0 0 #fff, 90px 0 0 #fff, 22px 10px 0 #fff, 37px 12px 0 #fff, 52px 10px 0 #fff, 60px 10px 0 #fff, 68px 10px 0 #fff, 83px 10px 0 #fff;
+  }
+}
 .button {
   color: inherit;
   background-color: transparent;
@@ -356,13 +571,22 @@ img.rounded {
 
 @font-face {
   font-family: "fontello";
-  src: url("../../assets/font/fontello.eot??60809407");
-  src: url("../../assets/font/fontello.eot??60809407#iefix") format("embedded-opentype"), url("../../assets/font/fontello.woff2??60809407") format("woff2"), url("../../assets/font/fontello.woff??60809407") format("woff"), url("../../assets/font/fontello.ttf??60809407") format("truetype"), url("../../assets/font/fontello.svg??60809407#fontello") format("svg");
+  src: url("../../assets/font/fontello.eot?38893332");
+  src: url("../../assets/font/fontello.eot?38893332#iefix") format("embedded-opentype"), url("../../assets/font/fontello.woff2?38893332") format("woff2"), url("../../assets/font/fontello.woff?38893332") format("woff"), url("../../assets/font/fontello.ttf?38893332") format("truetype"), url("../../assets/font/fontello.svg?38893332#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../../assets/font/fontello.svg?38893332#fontello') format('svg');
+  }
+}
+*/
 [class^=icon-]:before, [class*=" icon-"]:before {
-  color: inherit;
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -372,22 +596,21 @@ img.rounded {
   margin-right: 0.2em;
   text-align: center;
   /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
   margin-left: 0.2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^=icon-], [class*=" icon-"] {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  /* fix buttons height */
-  line-height: 1em;
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-down:before {
@@ -410,6 +633,11 @@ img.rounded {
 }
 
 /* '' */
+.icon-paper:before {
+  content: "";
+}
+
+/* '' */
 .icon-github:before {
   content: "";
 }
@@ -477,7 +705,8 @@ ul.list li p {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
 }
 
 h1 {
