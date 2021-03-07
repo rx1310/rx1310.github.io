@@ -88,3 +88,10 @@ img {
   background-color: $colorFont; 
   color: $colorBackground;
 }
+
+@media (max-width: 1024px) {
+  .inverse {
+    background-color: transparent; 
+    color: inherit;
+  }
+}

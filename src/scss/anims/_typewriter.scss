@@ -8,12 +8,12 @@
  * </div>
  */
 
-$blue: #176bef;
-$blue-dark: #1d49cc;
-$key: #fff;
+$primary: #ffffff;
+$primary-dark: #8d8d8d;
+$key: #000000;
 $paper: #EEF0FD;
-$text: #D3D4EC;
-$tool: #f7b529;
+$text: #3a3a3a;
+$tool: #777777;
 $duration: 3s;
 
 @mixin keyboard($position: 0, $value: 0) {
@@ -46,7 +46,7 @@ $duration: 3s;
     height: 20px;
     margin-left: 14px;
     transform: translateX(14px);
-    background: linear-gradient($blue, $blue-dark);
+    background: linear-gradient($primary, $primary-dark);
     animation: slide $duration ease infinite;
 
     @include setBorderRadius(4px);
@@ -157,7 +157,7 @@ $duration: 3s;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, $blue, $blue-dark);
+      background: linear-gradient(135deg, $primary, $primary-dark);
       transform: perspective(10px) rotateX(2deg);
       transform-origin: 50% 100%;
 
