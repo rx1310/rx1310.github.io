@@ -83,3 +83,8 @@ img {
   &-align-left {justify-content: left;}
 
 }
+
+.inverse {
+  background-color: $colorFont; 
+  color: $colorBackground;
+}

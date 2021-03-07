@@ -320,6 +320,11 @@ img.rounded {
   justify-content: left;
 }
 
+.inverse {
+  background-color: #fafafa;
+  color: #111111;
+}
+
 /*
  * <div class="typewriter anim-typewriter">
  *    <div class="slide"><i></i></div>
