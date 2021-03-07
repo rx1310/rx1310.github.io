@@ -218,6 +218,10 @@ legend {
   opacity: 0.5;
 }
 
+html {
+  background-color: #111111;
+}
+
 body {
   background-color: #111111;
   background: linear-gradient(#111111ce, #111111ce), url("../../assets/img/page_bg.webp") center center no-repeat;

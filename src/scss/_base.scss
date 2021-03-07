@@ -1,5 +1,9 @@
 // ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
 
+html {
+  background-color: $colorBackground;
+}
+
 body {
   background-color: $colorBackground;
   background: linear-gradient(#111111ce, #111111ce), url("../../assets/img/page_bg.webp") center center no-repeat;
