@@ -1,0 +1,63 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
+
+ul.list {
+
+  background-color: lighten($colorBackground, 5%);
+  list-style-type: none;
+  padding: 0;
+
+  @include setBorderRadius();
+
+  li {
+
+    $transition:
+      background-color .30s,
+      border-color .30s,
+      color .30s;
+
+    padding: 1em;
+    cursor: pointer;
+
+    @include setTransition($transition);
+
+    &:hover { background-color: fade-out($colorAccent, .8); }
+    &:active { 
+      background-color: $colorAccent;
+      border-color: $colorAccent;
+      color: invert($colorFont);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $colorDivider;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+    &:first-child {
+      border-top-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+    }
+
+    &.title {
+      
+      border: none;
+      color: $colorAccent;
+      cursor: not-allowed;
+      pointer-events: none;
+      padding-bottom: .5em;
+      
+    }
+
+    p {
+      font-size: smaller;
+      margin-bottom: 0;
+      margin-top: .4em;
+      -moz-opacity: 0.8;
+           opacity: 0.8;
+    }
+    
+  }
+
+}
