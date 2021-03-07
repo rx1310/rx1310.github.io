@@ -20,7 +20,7 @@ h6 { font-size: 1rem; }
 .text-lowercase { text-transform: lowercase; }
 .text-uppercase { text-transform: uppercase; }
 .text-capitalize { text-transform: capitalize; }
-.text-muted { color: lighten($colorFont, 25%); }
+.text-muted { color: darken($colorFont, 25%); }
 .text-info { color: $COLOR-BLUE; }
 .text-success { color: $COLOR-GREEN; }
 .text-warning { color: $COLOR-YELLOW; }
