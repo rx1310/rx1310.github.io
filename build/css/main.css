@@ -218,14 +218,8 @@ legend {
   opacity: 0.5;
 }
 
-html {
-  background-color: #111111;
-}
-
 body {
   background-color: #111111;
-  background: linear-gradient(#111111ce, #111111ce), url("../../assets/img/page_bg.webp") center center no-repeat;
-  background-attachment: fixed;
   color: #fafafa;
   font-family: "JetBrains Mono", monospace;
   margin: 0;
@@ -233,9 +227,6 @@ body {
   scrollbar-width: thin;
   text-transform: lowercase;
   scrollbar-color: #6d6d6d #111111;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
