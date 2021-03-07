@@ -36,21 +36,14 @@ a {
 
   color: $colorAccent;
   font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: $COLOR-GREEN;
-  text-decoration-style: wavy;
-
-  -moz-text-decoration-color: $COLOR-GREEN;
-  -moz-text-decoration-style: wavy;
+  text-decoration: none;
+  text-decoration-style: none;
+  -moz-text-decoration-style: none;
 
   @include setTransition($transition);
 
-  &:hover {
-    color: darken($COLOR-RED, 20%);
-    text-decoration-color: $COLOR-YELLOW;
-    -moz-text-decoration-color: $COLOR-YELLOW;
-  }
-  &:active { color: darken($colorAccent, 20%); }
+  &:hover { color: darken($colorAccent, 15%); }
+  &:active { color: darken($colorAccent, 25%); }
 
 }
 
