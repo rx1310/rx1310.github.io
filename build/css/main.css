@@ -584,6 +584,9 @@ img.rounded {
   color: #050505;
   background-color: white;
 }
+.button-borderless {
+  border-color: transparent;
+}
 
 @font-face {
   font-family: "fontello";
