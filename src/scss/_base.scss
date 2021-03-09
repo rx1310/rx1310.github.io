@@ -95,3 +95,9 @@ img {
     color: inherit;
   }
 }
+
+@media (max-width: 768px) {
+  .a2iga-preview {
+    display: none;
+  }
+}

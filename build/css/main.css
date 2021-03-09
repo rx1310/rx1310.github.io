@@ -331,6 +331,11 @@ img.rounded {
     color: inherit;
   }
 }
+@media (max-width: 768px) {
+  .a2iga-preview {
+    display: none;
+  }
+}
 /*
  * <div class="typewriter anim-typewriter">
  *    <div class="slide"><i></i></div>
@@ -582,8 +587,8 @@ img.rounded {
 
 @font-face {
   font-family: "fontello";
-  src: url("../../assets/font/fontello.eot?38893332");
-  src: url("../../assets/font/fontello.eot?38893332#iefix") format("embedded-opentype"), url("../../assets/font/fontello.woff2?38893332") format("woff2"), url("../../assets/font/fontello.woff?38893332") format("woff"), url("../../assets/font/fontello.ttf?38893332") format("truetype"), url("../../assets/font/fontello.svg?38893332#fontello") format("svg");
+  src: url("../../assets/font/fontello.eot?97960564");
+  src: url("../../assets/font/fontello.eot?97960564#iefix") format("embedded-opentype"), url("../../assets/font/fontello.woff2?97960564") format("woff2"), url("../../assets/font/fontello.woff?97960564") format("woff"), url("../../assets/font/fontello.ttf?97960564") format("truetype"), url("../../assets/font/fontello.svg?97960564#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -593,7 +598,7 @@ img.rounded {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../../assets/font/fontello.svg?38893332#fontello') format('svg');
+    src: url('../../assets/font/fontello.svg?97960564#fontello') format('svg');
   }
 }
 */
@@ -601,6 +606,7 @@ img.rounded {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  speak: never;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -649,16 +655,177 @@ img.rounded {
 }
 
 /* '' */
+.icon-warn:before {
+  content: "";
+}
+
+/* '' */
+.icon-help:before {
+  content: "";
+}
+
+/* '' */
+.icon-chrome:before {
+  content: "";
+}
+
+/* '' */
+.icon-tool:before {
+  content: "";
+}
+
+/* '' */
+.icon-spin4:before {
+  content: "";
+}
+
+/* '' */
+.icon-spin1:before {
+  content: "";
+}
+
+/* '' */
+.icon-spin3:before {
+  content: "";
+}
+
+/* '' */
+.icon-spin2:before {
+  content: "";
+}
+
+/* '' */
+.icon-download:before {
+  content: "";
+}
+
+/* '' */
+.icon-info:before {
+  content: "";
+}
+
+/* '' */
 .icon-github:before {
   content: "";
 }
 
 /* '' */
+.icon-code:before {
+  content: "";
+}
+
+/* '' */
+.icon-youtube:before {
+  content: "";
+}
+
+/* '' */
+.icon-windows:before {
+  content: "";
+}
+
+/* '' */
+.icon-android:before {
+  content: "";
+}
+
+/* '' */
+.icon-linux:before {
+  content: "";
+}
+
+/* '' */
+.icon-google:before {
+  content: "";
+}
+
+/* '' */
 .icon-telegram:before {
   content: "";
 }
 
 /* '' */
+/*
+   Animation example, for spinners
+*/
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 ul.list {
   border: 1px solid #242424;
   list-style-type: none;
