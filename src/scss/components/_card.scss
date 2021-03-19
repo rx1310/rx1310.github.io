@@ -1,0 +1,28 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
+
+.card {
+
+  $transition:
+      background-color .30s,
+      border-color .30s,
+      color .30s;
+
+  border: 1px solid $colorDivider;
+  padding: 1em 1.2em;
+  margin: .2em;
+
+  @include setBorderRadius();
+  @include setTransition($transition);
+
+  &-clickable {
+    cursor: pointer;
+  }
+
+  &:hover { background-color: fade-out($colorDivider, .5); }
+  &:active { 
+    background-color: $colorDivider;
+    border-color: $colorDivider;
+      //color: invert($colorFont);
+  }
+
+}
