@@ -18,6 +18,8 @@
     <link rel="manifest" href="https://rawcdn.githack.com/rx1310/rx1310.github.io/09d5caa04edc5171099849d1108cd51d117c664d/assets/_favicon/site.webmanifest">
     <!--link rel="stylesheet" href="https://rawcdn.githack.com/rx1310/rx1310.github.io/09d5caa04edc5171099849d1108cd51d117c664d/assets/css/main.css"-->
     <link rel="stylesheet" href="build/css/main.css">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script>ScrollReveal({ duration: 1000 })</script>
     <title>rx1310 | официальный сайт</title>
   </head>
   <body>
@@ -77,7 +79,7 @@
             <br><br>
             <div class="row no-gutters">
               <div class="col-md-4 col-12">
-                <div class="card card-clickable" onclick="location.href='https://rx1310.github.io/a2iga'">
+                <div class="card card-clickable" onclick="location.href='./a2iga.html'">
                   <img src="assets/img/a2iga_banner.webp" alt="баннер для a2iga" class="rounded">
                   <h3>a2iga</h3>
                   <p>Маленькая утилита, которая поможет заменить Google Assistant, вызываемый зажатием кнопки Home / жестом нижних краёв экрана (Android Q), на любое приложение, нужное вам.</p>
@@ -143,9 +145,13 @@
           </div>
         </div>
 
-        
       </div>
     </div>
+
+    <script>
+      ScrollReveal().reveal('.fragment')
+      ScrollReveal().reveal('.inverse', { delay: 100 })
+    </script>
 
   </body>
 </html>

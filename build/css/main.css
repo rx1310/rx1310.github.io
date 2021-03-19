@@ -661,6 +661,10 @@ img.rounded {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+[class*=icon-without-margin]:before {
+  margin: 0em;
+}
+
 .icon-up:before {
   content: "";
 }

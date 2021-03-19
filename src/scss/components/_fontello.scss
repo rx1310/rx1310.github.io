@@ -9,6 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -53,6 +54,10 @@
  
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+[class*="icon-without-margin"]:before {
+  margin: 0em;
 }
  
 .icon-up:before { content: '\e800'; } /* '' */
