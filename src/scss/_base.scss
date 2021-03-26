@@ -67,17 +67,11 @@ hr {
 }
 
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-} 
-
-@keyframes blink-animation {
-  to { visibility:hidden; }
+  -webkit-animation: blink 800ms infinite;
+          animation: blink 800ms infinite;
 }
-
-@-webkit-keyframes blink-animation {
-  to { visibility:hidden; } 
-}
+@-webkit-keyframes blink { 50% { color: transparent; }}
+        @keyframes blink { 50% { color: transparent; }}
 
 .fragment {
 
@@ -147,4 +141,27 @@ textarea {
     //border-color: $colorAccent;
   }
 
+}
+
+.anim-topToBottom {
+  animation: moveUpWithFade 2s linear infinite;
+}
+
+@keyframes moveUpWithFade {
+  from {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(80%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
 }

@@ -302,18 +302,18 @@ hr {
 }
 
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink 800ms infinite;
+  animation: blink 800ms infinite;
 }
 
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
+@-webkit-keyframes blink {
+  50% {
+    color: transparent;
   }
 }
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
+@keyframes blink {
+  50% {
+    color: transparent;
   }
 }
 .fragment {
@@ -386,6 +386,28 @@ textarea:active {
   background-color: white;
 }
 
+.anim-topToBottom {
+  animation: moveUpWithFade 2s linear infinite;
+}
+
+@keyframes moveUpWithFade {
+  from {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(80%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
 /*
  * <div class="typewriter anim-typewriter">
  *    <div class="slide"><i></i></div>
@@ -636,6 +658,20 @@ textarea:active {
 }
 .button-borderless {
   border-color: transparent;
+}
+.button-accented {
+  -webkit-animation: borderPulse 800ms infinite;
+  animation: borderPulse 800ms infinite;
+}
+@-webkit-keyframes borderPulse {
+  50% {
+    border-color: #3e3e3e;
+  }
+}
+@keyframes borderPulse {
+  50% {
+    border-color: #3e3e3e;
+  }
 }
 
 .card {

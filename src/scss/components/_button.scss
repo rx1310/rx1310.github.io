@@ -39,4 +39,11 @@
     border-color: transparent;
   }
 
+  &-accented {
+    -webkit-animation: borderPulse 800ms infinite;
+            animation: borderPulse 800ms infinite;
+  }
+  @-webkit-keyframes borderPulse { 50% { border-color: lighten($colorDivider, 10); }}
+          @keyframes borderPulse { 50% { border-color: lighten($colorDivider, 10); }}
+
 }
