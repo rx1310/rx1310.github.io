@@ -60,6 +60,12 @@ img {
 
 }
 
+hr {
+  background-color: $colorDivider; 
+  height: 1px; 
+  border: 0;
+}
+
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -97,7 +103,48 @@ img {
 }
 
 @media (max-width: 768px) {
-  .a2iga-preview {
-    display: none;
+  .a2iga-preview { display: none; }
+}
+
+.wavy-text {
+  text-decoration: underline; 
+  text-decoration-style: wavy;
+  text-decoration-color: fade-out($colorFont, .60);
+}
+
+input,
+textarea {
+  
+  $transition:
+   background-color .30s,
+   border-color .30s,
+   color .30s;
+
+  color: inherit;
+  background-color: transparent;
+  border: 0.05em solid $colorDivider;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  padding: .6em .9em;
+  
+  @include setBorderRadius();
+  @include setTransition($transition);
+
+  &:focus,
+  &:hover {
+    background-color: fade-out($colorDivider, .5);
+    //border-color: $colorAccent;
+    color: $colorAccent;
   }
+  &:focus,
+  &:active {
+    color: invert($colorFont);
+    background-color: $colorAccent;
+    //border-color: $colorAccent;
+  }
+
 }

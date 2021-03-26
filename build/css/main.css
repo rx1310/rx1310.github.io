@@ -295,6 +295,12 @@ img.rounded {
   border-radius: 0.5em;
 }
 
+hr {
+  background-color: #242424;
+  height: 1px;
+  border: 0;
+}
+
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -336,6 +342,50 @@ img.rounded {
     display: none;
   }
 }
+.wavy-text {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: rgba(250, 250, 250, 0.4);
+}
+
+input,
+textarea {
+  color: inherit;
+  background-color: transparent;
+  border: 0.05em solid #242424;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  padding: 0.6em 0.9em;
+  -webkit-border-radius: 0.5em;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 0.5em;
+  /* ? Firefox */
+  border-radius: 0.5em;
+  -webkit-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  /* ? Safari, Chrome, iOS */
+  -moz-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  /* ? Firefox */
+  -o-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  /* ? Opera */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+input:focus, input:hover,
+textarea:focus,
+textarea:hover {
+  background-color: rgba(36, 36, 36, 0.5);
+  color: white;
+}
+input:focus, input:active,
+textarea:focus,
+textarea:active {
+  color: #050505;
+  background-color: white;
+}
+
 /*
  * <div class="typewriter anim-typewriter">
  *    <div class="slide"><i></i></div>
