@@ -1,0 +1,8 @@
+{
+	"inverse bg text": {
+		"scope": "html",
+		"prefix": "inverse",
+		"body": ["$1<span class=\"inverse\">$2</span>$3"],
+		"description": "inversed text background"
+	}
+}
