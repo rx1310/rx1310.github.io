@@ -408,6 +408,30 @@ textarea:active {
     opacity: 0;
   }
 }
+.game-box {
+  color: #2e2e2e;
+  border: 1px solid #242424;
+  display: inline-block;
+  width: fit-content;
+  padding: 0 0.8em;
+  -webkit-border-radius: 0.5em;
+  /* ? Safari, Chrome, iOS */
+  -moz-border-radius: 0.5em;
+  /* ? Firefox */
+  border-radius: 0.5em;
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  /* ? Safari, Chrome, iOS */
+  -moz-transition: border-color 0.3s, color 0.3s;
+  /* ? Firefox */
+  -o-transition: border-color 0.3s, color 0.3s;
+  /* ? Opera */
+  transition: border-color 0.3s, color 0.3s;
+}
+.game-box:hover {
+  color: #3e3e3e;
+  border-color: #3e3e3e;
+}
+
 /*
  * <div class="typewriter anim-typewriter">
  *    <div class="slide"><i></i></div>
@@ -1115,7 +1139,7 @@ h6 {
 }
 
 .text-muted {
-  color: #bababa;
+  color: #7b7b7b;
 }
 
 .text-info {

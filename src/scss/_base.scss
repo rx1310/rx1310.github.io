@@ -165,3 +165,26 @@ textarea {
     opacity: 0;
   }
 }
+
+.game-box {
+
+  $transition:
+    border-color .30s,
+    color .30s;
+
+  color: darken($colorFont, 80%);
+  //background-color: fade-out($colorDivider, .5);
+  border: 1px solid $colorDivider;
+  display: inline-block;
+  width: fit-content;
+  padding: 0 .8em;
+
+  @include setBorderRadius();
+  @include setTransition($transition);
+
+  &:hover {
+    color: lighten($colorDivider, 10);
+    border-color: lighten($colorDivider, 10);
+  }
+  
+}

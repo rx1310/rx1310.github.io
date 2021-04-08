@@ -137,6 +137,15 @@
           </div>
         </div>
 
+        <div class="col-12 fragment">
+          <div>
+            <h1><span class="inverse">don</span>ate</h1>
+            <p>если у вас появилось (вдруг?!) желание меня поддержать или просто угостить кружкой неплохого <i class="icon icon-beer"></i>  пивка, то вы можете <s>пригласить меня в бар</s> отправить мне немного <i class="icon icon-money"></i>  money. уверяю - все бабосики пойдут на развитие моей (пока) еще не открывшейся язвы.</p>
+            <p><button class="button clipboard" data-clipboard-text="5536 9139 4447 0695"><i class="icon icon-money"></i> Tinkoff</button></p>
+            <p><i class="text-muted">* нажмите на кнопку, чтобы скопировать реквизиты</i></p>
+          </div>
+        </div>
+
         <div class="col-12 text-align_center fragment">
           <div>
             <h1>¯\_(ツ<span class="inverse">)_/¯</span></h1>
@@ -147,16 +156,16 @@
             </p>
             <br>
             <p style="text-decoration: underline; text-decoration-style: wavy;">ник <a href="https://nick-name.ru/nickname/rx1310/">rx1310</a> был зарегистрирован 23 jan. 2020.</p>
-            <p style="margin-top: 3em;" disabled><b>Copyright (c) rx1310, 2021</b><br><span class="inverse" title="любое коммерческое использование">запрещено</span> любое коммерческое использование материалов, в том числе воспроизведение текстов статей или их фрагментов с целью коммерческой реализации права доступа к указанным материалам.</p>
+            <p style="margin-top: 3em;" disabled><b>Copyright (c) rx1310, 2021</b><br><span class="inverse" title="любое коммерческое использование">запрещено</span> любое коммерческое использование материалов, в том числе воспроизведение текстов статей или их фрагментов с целью коммерческой реализации права доступа к указанным материалам.</p><br>
+            <div class="game-box">
+              <p>
+                <a href="game.radius-raid/index.html">radius-raid</a> / <a href="https://rx1310.github.io/2048">2048</a>
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="col-12 fragment text-align_center" hidden>
-          <div>
-            <h1><span class="inverse">don</span>ate</h1>
-            <p>если у вас появилось (вдруг?!) желание меня поддержать или просто угостить кружкой неплохого <i class="icon icon-beer"></i>  пивка, то вы можете <s>пригласить меня в бар</s> отправить мне немного <i class="icon icon-money"></i>  money. уверяю - все бабосики пойдут на развитие моей (пока) еще не открывшейся язвы.</p>
-          </div>
-        </div>
+        
 
       </div>
     </div>
@@ -164,7 +173,11 @@
     <script>
       ScrollReveal().reveal('.fragment')
       ScrollReveal().reveal('.inverse', { delay: 100 })
+      ScrollReveal().reveal('.game-box', { delay: 5000 })
     </script>
+
+    <script src="build/js/clipboard.min.js"></script>
+    <script>new ClipboardJS('.clipboard');</script>
 
   </body>
 </html>
