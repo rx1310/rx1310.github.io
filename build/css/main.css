@@ -1075,6 +1075,11 @@ ul.list li p {
   -moz-opacity: 0.8;
   opacity: 0.8;
 }
+@media (min-width: 768px) {
+  ul.list {
+    zoom: 0.85;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;

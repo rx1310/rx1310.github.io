@@ -21,7 +21,7 @@ ul.list {
     @include setTransition($transition);
 
     &:hover { background-color: fade-out($colorDivider, .5); }
-    &:active { 
+    &:active {
       background-color: $colorDivider;
       border-color: $colorDivider;
       //color: invert($colorFont);
@@ -41,14 +41,14 @@ ul.list {
     }
 
     &.title {
-      
+
       border: none;
       font-weight: bold;
       color: $colorAccent;
       cursor: not-allowed;
       pointer-events: none;
       padding-bottom: .5em;
-      
+
     }
 
     p {
@@ -58,7 +58,11 @@ ul.list {
       -moz-opacity: 0.8;
            opacity: 0.8;
     }
-    
+
+  }
+
+  @media (min-width: 768px) {
+    zoom: 0.85;
   }
 
 }
