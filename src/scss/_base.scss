@@ -30,7 +30,7 @@ body {
 }
 
 a {
-  
+
   $transition:
     text-decoration-color .30s,
     color .30s;
@@ -61,8 +61,8 @@ img {
 }
 
 hr {
-  background-color: $colorDivider; 
-  height: 1px; 
+  background-color: $colorDivider;
+  height: 1px;
   border: 0;
 }
 
@@ -85,13 +85,13 @@ hr {
 }
 
 .inverse {
-  background-color: $colorFont; 
+  background-color: $colorFont;
   color: $colorBackground;
 }
 
 @media (max-width: 1024px) {
   .inverse {
-    background-color: transparent; 
+    background-color: transparent;
     color: inherit;
   }
 }
@@ -101,14 +101,14 @@ hr {
 }
 
 .wavy-text {
-  text-decoration: underline; 
+  text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: fade-out($colorFont, .60);
 }
 
 input,
 textarea {
-  
+
   $transition:
    background-color .30s,
    border-color .30s,
@@ -124,7 +124,7 @@ textarea {
   text-overflow: ellipsis;
   text-transform: uppercase;
   padding: .6em .9em;
-  
+
   @include setBorderRadius();
   @include setTransition($transition);
 
@@ -186,5 +186,5 @@ textarea {
     color: lighten($colorDivider, 10);
     border-color: lighten($colorDivider, 10);
   }
-  
+
 }

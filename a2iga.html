@@ -48,7 +48,7 @@
               <li>установка a2iga в качестве приложения-помощника в настройках Android,</li>
               <li>выбор нужного вам приложения из списка установленны (есть поиск).</li>
             </ol>
-            <button class="button" onclick="location.href='https://github.com/rx1310/a2iga/wiki'"><i class="icon icon-paper"></i> wiki</button>
+            <button class="button" onclick="location.href='https://github.com/rx1310/a2iga/wiki'"><i class="icon icon-paper"></i> wiki</button> <span class="icon-spinner2 animate-spin text-muted"></span> <span class="text-muted">пока еще пишется</span>
           </div>
           <img class="a2iga-preview" src="assets/img/a2iga_preview_2.webp" alt="превьюха" width="50%">
         </div>
@@ -59,16 +59,21 @@
             <p>скачать a2iga можно с <a href="https://4pda.ru/forum/index.php?showtopic=1002185">4pda</a> и с этого сайта через <a href="https://github.com/rx1310/a2iga/releases">github releases</a>. <span class="text-warning">Наже в списке ссылки только на файлы с github releases!</span></p>
             <br>
             <ul class="list">
+              <li class="title">версии в разработке</li>
               <li onclick="location.href='https://github.com/rx1310/a2iga/releases/tag/21xxxx'" disabled>
-                <span class="icon-spinner2 animate-spin"></span> A2IGA 9.21xxxx
+                <span class="icon-spinner2 animate-spin text-danger"></span> A2IGA 9.21xxxx
+                <p><br><img alt="GitHub release (by tag)" src="https://img.shields.io/badge/status-in%20developing-f7b529"></p>
               </li>
+              <li class="title">актуальные версии</li>
               <li onclick="location.href='https://github.com/rx1310/a2iga/releases/tag/210403'">
-                <i class="icon icon-download"></i> A2IGA 8.210403 <small class="text-muted">03 Apr 2021</small>
+                <i class="icon icon-download text-success"></i> A2IGA 8.210403 <small class="text-muted">03 Apr 2021</small>
+                <p>полный редизайн приложения, переработка структуры и перепись всего кода, оптимизация и доработка appslist</p>
                 <p><br><img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/rx1310/a2iga/210403/total"></p>
               </li>
-              <li class="title">старые версии</li>
+              <li class="title">устаревшие версии</li>
               <li onclick="location.href='https://github.com/rx1310/a2iga/releases/download/201127/A2IGA_7.201127.apk'">
-                <i class="icon icon-download"></i> A2IGA 7.201127 <small class="text-muted">27 Nov 2020</small>
+                <i class="icon icon-download text-warning"></i> A2IGA 7.201127 <small class="text-muted">27 Nov 2020</small>
+                <p>ребрендинг, замена package name (из-за отделения от o1310) и прочие фиксы на основе посл. коммитов</p>
                 <p><br><img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/rx1310/a2iga/201127/total"></p>
               </li>
               <li onclick="location.href='https://github.com/rx1310/a2iga/releases'">
@@ -77,6 +82,13 @@
                 <p><br><img alt="GitHub release (by tag)" src="https://img.shields.io/github/downloads/rx1310/a2iga/total"></p>
               </li>
             </ul>
+            <p>
+              <small disabled>
+                <span class="text-success">•</span> версия в стабильной ветке<br>
+                <span class="text-warning">•</span> версия, которая уже устарела<br>
+                <span class="text-danger">•</span> версия в разработке
+              </small>
+            </p>
           </div>
         </div>
 
@@ -84,7 +96,8 @@
           <div>
             <h1><i class="icon icon-tool"></i><br><br>модули</h1>
             <p>модули помогают выполнить какие-либо действия в один клик, которые пользователи выполняют в несколько кликов. модули могут иметь разный функционал и всё зависит от идеи разработчика, который делал модуль.</p>
-            <ul class="list">
+            <p><button class="button" onclick="location.href='/docs/a2iga/modules.html'">перейти к списку</button></p>
+            <ul class="list" hidden>
               <li onclick="location.href='https://github.com/rx1310/a2iga-module.flashlight/releases/latest'">
                 <i class="icon icon-download"></i> flashlight
                 <p>модуль, который включает фонарик при вызове ассистента</p>
@@ -97,7 +110,7 @@
                 <i class="icon icon-spinner2 animate-spin"></i> getdir <small class="text-muted">(в разработке)</small>
                 <p>Модуль, который просто переходит в файловом менеджере в выбранную пользователем директорию</p>
               </li>
-              <li onclick="location.href='/docs/a2iga/modules.html'" hidden>
+              <li onclick="location.href='/docs/a2iga/modules.html'">
                 <i class="icon icon-right"></i> all modules
                 <p>посмотреть список всех доступных модулей от разработчика</p>
               </li>
