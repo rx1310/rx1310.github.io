@@ -2,6 +2,8 @@
 
 body {
   background-color: $colorBackground;
+  background-image: url(../../assets/img/pattern_01.png);
+  background-repeat: repeat;
   color: $colorFont;
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
